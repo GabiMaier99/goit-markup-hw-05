@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>goit-markup-hw-03</title>
+    <title>goit-markup-hw-05</title>
   </head>
   <body>
     <!-- Header -->
@@ -30,16 +30,22 @@
           >
           <ul class="list hero-navbar-list">
             <li>
-              <a href="./index.html" class="hero-navbar-link list-link link"
+              <a
+                href="./index.html"
+                class="navbar-link is-active list-link link"
                 >Studio</a
               >
             </li>
             <li>
-              <a href="./portfolio.html" class="hero-navbar-link list-link link"
+              <a
+                href="./portfolio.html"
+                class="navbar-link is-active list-link link"
                 >Portfolio</a
               >
             </li>
-            <li><a href="" class="list-link link">Contacts</a></li>
+            <li>
+              <a href="" class="list-link link">Contacts</a>
+            </li>
           </ul>
         </nav>
 
@@ -67,7 +73,9 @@
           <h1 class="section-one-title primary-title">
             Effective Solutions for Your Business
           </h1>
-          <button type="button" class="hero-button">Order Service</button>
+          <button data-modal-open type="button" class="hero-button">
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -439,5 +447,15 @@
         </div>
       </div>
     </footer>
+    <div data-modal-open class="modal-button is-hidden">
+      <div class="modal-button-second">
+        <button data-modal-close type="button" class="modal-button-third">
+          <svg width="8" height="8" class="modal-link">
+            <use href=""></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

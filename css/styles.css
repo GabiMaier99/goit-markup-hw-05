@@ -104,10 +104,23 @@ p {
   align-items: center;
 }
 
-.hero-navbar-link {
-  padding: 24px 0;
+.navbar-link {
+  position: relative;
+  color: var(--pressed-state);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.is-active::after {
+  width: 100%;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: var(--pressed-state);
+  border-radius: 2px;
+}
 .logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -131,6 +144,7 @@ p {
 }
 .list-link {
   color: var(--hero-background);
+  padding: 24px 0;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -369,6 +383,7 @@ p {
   background: var(--primary-brand);
   color: var(--mmodal-background);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover {
   background-color: var(--pressed-state);
@@ -533,6 +548,7 @@ p {
   height: 100%;
   background-color: var(--primary-brand);
   border-radius: 50%;
+  transition: var(--primary-brand) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-four-link:hover {
@@ -595,4 +611,66 @@ p {
 
 .customers-icons {
   fill: currentColor;
+}
+
+.modal-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-button-second {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 408px;
+  min-height: 584px;
+  background: #fcfcfc;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-third {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  padding: 0;
+  cursor: pointer;
+  transition: background-colour 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-third:hover {
+  background-color: var(--pressed-state);
+  border: none;
+}
+
+.modal-button-third:focus {
+  background-color: var(--pressed-state);
+  border: none;
+}
+
+.modal-link {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -671,6 +671,14 @@ p {
 }
 
 .modal-button-third:hover {
+  fill: #ffffff;
+}
+
+.modal-button-third:focus {
+  fill: #ffffff;
+}
+
+.modal-button-third:hover {
   background-color: var(--pressed-state);
   border: none;
 }

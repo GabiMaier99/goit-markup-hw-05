@@ -105,9 +105,9 @@ p {
 }
 
 .navbar-link {
+  color: var(--pressed-state);
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: #404bbf;
 }
 
 .is-active::after {
@@ -120,6 +120,7 @@ p {
   height: 4px;
   background-color: var(--pressed-state);
   border-radius: 2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo {
   display: inline-block;
@@ -211,19 +212,6 @@ p {
 .portfolio-section-card {
   width: calc(100% - 48px) / 3;
   text-decoration: none;
-}
-
-.cards {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: #404bbf;
-}
-
-.cards:hover {
-  transform: translateY(0%);
-}
-
-.cards:focus {
-  transform: translateY(0%);
 }
 
 .portfolio-card-list-link {
@@ -651,6 +639,9 @@ p {
 }
 
 .modal-button-second {
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -658,13 +649,11 @@ p {
   width: 408px;
   min-height: 584px;
   background: #fcfcfc;
-  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-third {
+  margin: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 24px;
   right: 24px;
@@ -677,7 +666,6 @@ p {
   background-color: var(--accent);
   padding: 0;
   cursor: pointer;
-  margin: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -699,6 +687,23 @@ p {
 .shadow-window {
   position: relative;
   overflow: hidden;
+}
+
+.cards {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #404bbf;
+}
+
+.cards:hover {
+  transform: translateY(0%);
+}
+
+.cards:focus {
+  transform: translateY(0%);
+}
+
+.portfolio-card-list-link {
+  display: block;
 }
 
 .paragraph-title {

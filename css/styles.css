@@ -106,8 +106,8 @@ p {
 
 .navbar-link {
   position: relative;
-  color: var(--pressed-state);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #404bbf;
 }
 
 .is-active::after {
@@ -215,6 +215,7 @@ p {
 
 .cards {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #404bbf;
 }
 
 .cards:hover {
@@ -296,7 +297,6 @@ p {
 .social-media-footer-lists {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-footer-link {
@@ -307,6 +307,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-footer-link:hover {
@@ -603,8 +604,6 @@ p {
 
 .customers-lists {
   width: calc((100% - 120px) / 6);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link {
@@ -616,6 +615,8 @@ p {
   height: 100%;
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover {
@@ -676,6 +677,7 @@ p {
   background-color: var(--accent);
   padding: 0;
   cursor: pointer;
+  margin: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

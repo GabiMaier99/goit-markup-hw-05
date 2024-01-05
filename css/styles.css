@@ -697,17 +697,13 @@ p {
   overflow: hidden;
 }
 
+.cards:hover .paragraph-title {
+  transform: translateY(0%);
+}
+
 .cards {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #404bbf;
-}
-
-.cards:hover {
-  transform: translateY(0%);
-}
-
-.cards:focus {
-  transform: translateY(0%);
 }
 
 .portfolio-card-list-link {

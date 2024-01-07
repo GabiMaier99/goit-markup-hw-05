@@ -147,11 +147,28 @@ p {
 
 .navbar-link {
   color: var(--pressed-state);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  color: var(--hero-background);
+}
+
+.navbar-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: var(--pressed-state);
+  border-radius: 2px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-active::after {
+/* .is-active::after {
   width: 100%;
   display: block;
   content: "";
@@ -162,18 +179,13 @@ p {
   background-color: var(--pressed-state);
   border-radius: 2px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .list-link {
   color: var(--hero-background);
-  padding: 24px 0;
   text-decoration: none;
-  font-size: 16px;
   font-weight: 500;
   line-height: 1.5em;
-  color: var(--pressed-state);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
 }
 
 .list-link:hover {
@@ -742,7 +754,7 @@ p {
 }
 
 .modal-button-third {
-  margin: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 24px;
   right: 24px;
@@ -760,21 +772,15 @@ p {
 }
 
 .modal-button-third:hover {
-  fill: #ffffff;
-}
-
-.modal-button-third:focus {
-  fill: #ffffff;
-}
-
-.modal-button-third:hover {
   background-color: var(--pressed-state);
   border: none;
+  fill: #ffffff;
 }
 
 .modal-button-third:focus {
   background-color: var(--pressed-state);
   border: none;
+  fill: #ffffff;
 }
 
 .modal-link {
